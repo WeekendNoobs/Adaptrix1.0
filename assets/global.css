@@ -1,0 +1,39 @@
+
+/* --- General styling for ALL chat message containers --- */
+[data-testid="stChatMessage"] {
+    /* Set a small, consistent gap between the avatar and the bubble */
+    gap: 0.75rem !important;
+    align-items: center !important;
+
+}
+
+/* --- General styling for ALL message bubbles --- */
+[data-testid="stChatMessageContent"] {
+    /* Remove any unwanted default margin */
+    margin: 0px !important;
+    padding: 1rem !important;
+    border-radius: 0.5rem !important;
+    max-width: 70% !important;
+    color: white !important;
+}
+
+[data-testid="stChatMessage"]:has([aria-label="Chat message from user"]) {
+    justify-content: flex-end !important;
+    flex-direction: row-reverse !important;
+    text-align: right;
+}
+
+
+[data-testid="stChatMessage"]:has([aria-label="Chat message from assistant"]) [data-testid="stChatMessageContent"] {
+    background-color: #262730 !important;
+}
+
+[data-testid="stChatMessage"]:has([aria-label="Chat message from user"]) [data-testid="stChatMessageContent"] {
+    background-color: #40414f !important;
+}
+
+[data-testid="stAlert"] {
+    background-color: #444739 !important;
+    border-radius: 0.5rem !important;
+    color: white !important;
+}
